@@ -1,4 +1,4 @@
-FROM node:8.11.3-alpine
+FROM node:14.0-alpine3.10
 
 ENV TIME_ZONE=Asia/Shanghai
 
@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
 
-RUN npm i
+RUN npm i --production
 
 # RUN npm i --registry=https://registry.npm.taobao.org
 
